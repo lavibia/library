@@ -5,16 +5,56 @@
 header{
     display: grid;
     grid-template-columns: 3fr 1fr;
+    padding: 30px;
+}
+header h1{
+    align-self: center;
+    justify-self: center;
+
+}
+header button{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 15px;
+    align-self: center;
+    justify-self: end;
+    border: none;
+    background-color: rgb(115, 158, 115);
+    color: white;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: 45px;
 }
  #book-holder{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap:15px;
-    padding: 30px;
+    padding: 0px 60px;
  }
 
 
 .card{
-    border: 2px solid greenyellow;
-    
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    gap: 5px;
+    padding: 15px;
+    height: 150px;
+    background-color:rgb(255, 252, 252);
+    border-radius: 15px;
+    box-shadow: 2px 5px 15px 5px rgb(206, 201, 201);
+}
+.title{
+    grid-column: 1/4;
+}
+.author{
+grid-column: 2/4;
+}
+.read{
+    justify-self: end;
+    align-self: center;
+    width: 25px;
+    height: 25px;
+}
+.label-read{
+    align-self: center;
 }
