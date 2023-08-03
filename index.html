@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,42 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
-    <header>
         <h1>LibrarYou</h1>
-        <button>+</button>
-    </header>
-    <div id="book-holder">
+        <header>
+            <button id="add">+</button>
+            <div class="book-progress">
+                <label for="progress"></label>
+                </br>
+                <progress id="progress"></progress>
 
+            </div>
+            <hr>
+        </header>
+
+        <div id="book-holder">
+
+        </div>
     </div>
-</div>
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Add a Book</h1>
+      
+          <label for="title"><b>Title</b></label>
+          <input type="text" placeholder="Title of the book" name="title" id="title" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+      
+          <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+          <button type="submit" class="btn save">Save</button>
+          
+        </form>
+      </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

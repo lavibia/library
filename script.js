@@ -50,9 +50,36 @@ function showBooks(){
         card.appendChild(read);
         card.appendChild(label);
         holder.appendChild(card);
+        syncProgress();
     }
 }
 
+
+
+
+function syncProgress(){
+    let progress=document.getElementById('progress');
+    let label = progress.parentElement.firstChild
+    let r=0;
+    for(let i=0; i<library.length;i++){
+        if(library[i].read=='true')
+            r++;
+    }
+    progress.setAttribute('max',library.length);
+    progress.setAttribute('value',r);
+    progress.textContent=r;
+    label.textContent= `Books read: ${r} / ${library.length}`
+}
+
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+document.getElementById('add').addEventListener('click', openForm);
 let book1= new Book('Romeo & Juliette',"Seckspeare", "1564","false");
 addBookToLibrary(book1);
 let book2= new Book('OCarte',"Tu", "128","true");
