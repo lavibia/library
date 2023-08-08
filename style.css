@@ -20,6 +20,7 @@ hr{
     width: 100%;
     box-shadow: 5px 5px 15px;
 }
+
 header button{
     width: 65px;
     height: 65px;
@@ -49,9 +50,9 @@ header button{
   /* Add styles to the form container */
   .form-container {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 3fr 3fr;
     gap: 15px;
-    width: 50%;
+    width: min(50%,400px);
     height: 50%;
     background: #fffcfc;
     position: absolute;
@@ -64,15 +65,29 @@ header button{
     padding: 25px;
   }
   .form-container h1{
-    grid-column: 1/6;
+    grid-column: 1/7;
   }
   .form-container label{
     grid-column: 1/2;
   }
   .form-container input{
-    grid-column: 2/6;
+    grid-column: 2/7;
   }
-  
+  .form-container .btn{
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-weight: bolder;
+  }
+  .form-container .save{
+    grid-column: 2/7;
+    background-color:  rgb(119, 129, 155);
+    color: white;
+  }
+  .form-container .cancel{
+    grid-column: 1/2;
+    color: rgb(80, 87, 104);;
+    background-color: rgb(224, 222, 222);
+  }
 
 header button:hover{
     transition-duration: 0.5s;

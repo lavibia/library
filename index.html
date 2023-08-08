@@ -28,17 +28,23 @@
         </div>
     </div>
     <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
+        <form action="#" class="form-container" method="post" id="form">
           <h1>Add a Book</h1>
       
           <label for="title"><b>Title</b></label>
           <input type="text" placeholder="Title of the book" name="title" id="title" required>
+
+          <label for="author"><b>Author</b></label>
+          <input type="text" placeholder="Author of the book" name="author" id="author" required>
+
+          <label for="pages"><b>Pages</b></label>
+          <input type="text" placeholder="Pages of the book" name="pages" id="pages" required>
       
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-      
-          <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-          <button type="submit" class="btn save">Save</button>
+          <label for="form-read"><b>Mark as Read</b></label>
+          <input type="checkbox"  name="read" id="form-read">
+
+          <button type="button" class="btn cancel" id='close'>Cancel</button>
+          <button type="submit" class="btn save" id="save">Save</button>
           
         </form>
       </div>
